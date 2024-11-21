@@ -1,0 +1,5 @@
+docker build --tag "api-yolo" .
+docker tag api-yolo maxl85/api-yolo:latest
+docker login -u maxl85
+docker push maxl85/api-yolo:latest
+docker pull maxl85/api-yolo:latest

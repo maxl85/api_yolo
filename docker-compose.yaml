@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  api_yolo:
+    image: maxl85/api-yolo:latest
+    container_name: api_yolo
+    volumes:
+    - ./:/app
+    working_dir: /app
+    ports:
+      - "8001:8001"
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 8001
